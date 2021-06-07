@@ -5,12 +5,12 @@ chain = "FILEPATH_GENESIS"
 no_persistent_txqueue = false
 
 [account]
-unlock = ["0x0000000000000000000000000000000000000001"]
+unlock = ["0x0000000000000000000000000000000000000005"]
 password = ["FILEPATH_ACCOUNT_PASSWORD"]
 fast_unlock = true
 
 [mining]
-engine_signer = "0x0000000000000000000000000000000000000001"
+engine_signer = "0x0000000000000000000000000000000000000005"
 reseal_on_txs = "none"
 usd_per_tx = "0"
 usd_per_eth = "0"
