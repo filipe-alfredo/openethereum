@@ -7,6 +7,7 @@ RUN apk update && \
     apk add bash && \
     apk add jq
 
+ARG NETWORK_ID
 ARG NETWORK_NAME
 ARG USER_ID
 ARG GROUP_ID
@@ -37,7 +38,7 @@ RUN mkdir -p ${BASE_PATH}/config
 COPY ./config/ ${BASE_PATH}/config/
 COPY ./configuration.sh ${BASE_PATH}/configuration.sh
 
-RUN sh ${BASE_PATH}/configuration.sh ${REWRITE_CONFIG_FILES} ${BASE_PATH} ${NETWORK_NAME}
+RUN sh ${BASE_PATH}/configuration.sh ${REWRITE_CONFIG_FILES} ${BASE_PATH} ${NETWORK_ID} ${NETWORK_NAME}
 
 RUN chown -R ${USER_NAME}:${GROUP_NAME} ${BASE_PATH}
 RUN chmod a+rwx -R ${BASE_PATH}

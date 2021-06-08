@@ -1,6 +1,7 @@
 # REFERENCE: https://paritytech.github.io/parity-config-generator/
 
 [parity]
+mode_timeout = 10000
 chain = "FILEPATH_GENESIS"
 no_persistent_txqueue = false
 
@@ -14,6 +15,7 @@ engine_signer = "0x0000000000000000000000000000000000000005"
 reseal_on_txs = "none"
 usd_per_tx = "0"
 usd_per_eth = "0"
+reseal_min_period = 20000
 reseal_max_period = 31536000000
 min_gas_price = 0
 force_sealing = true
@@ -26,12 +28,14 @@ interface = "0.0.0.0"
 hosts = ["all"]
 apis = ["all"]
 origins = ["http://127.0.0.1:*", "chrome-extension://*", "moz-extension://*"]
+# origins = ["all"]
 
 [rpc]
 interface = "0.0.0.0"
 hosts = ["all"]
 cors = ["all"]
-apis = ["web3", "eth", "pubsub", "net", "parity", "parity_pubsub","parity_set", "parity_accounts", "rpc"]
+# apis = ["web3", "eth", "pubsub", "net", "parity", "parity_pubsub","parity_set", "parity_accounts", "rpc"]
+apis = ["all"]
 server_threads = 8
 processing_threads = 0
 

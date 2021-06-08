@@ -5,7 +5,8 @@ services:
       context: ./
       dockerfile: dockerfile
       args:
-        - NETWORK_NAME:${NETWORK_NAME}
+        - NETWORK_ID=${NETWORK_ID}
+        - NETWORK_NAME=${NETWORK_NAME}
         - USER_ID=${USER_ID}
         - USER_NAME=${USER_NAME}
         - GROUP_ID=${GROUP_ID}
